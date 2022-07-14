@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kyobo</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/pc.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="wrap">
+                <h1>
+                    <div class="m"><a href="#"><img src="./images/kyobo_logo_w.png" alt="kyobo"></a></div>
+                    <div class="pc"><a href="#"><img src="./images/kyobo_logo.png" alt="kyobo"></a></div>
+                </h1>
+                <div class="sub-wrap">
+                    <div class="search-store">
+                        <a href="#">매장 선택</a>
+                    </div>
+                    <div class="search-main">
+                        <button class="btn-search"><img src="./images/btn_search.png" alt="search"></button>
+                        <form action=""><input type="text" placeholder="검색어를 입력하세요."></form>
+                    </div>
+                    <ul class="util">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">마이룸</a></li>
+                        <li><a href="#">장바구니</a></li>
+                        <li><a href="#">주문배송</a></li>
+                    </ul>
+                </div>
+                <div class="btn-open">
+                    <button><img src="./images/nav_open.png" alt="menu open"></button>
+                </div>
+            </div>
+            <div class="sub-gnb">
+                <ul class="sub-gnb-wrapper">
+                    <li><a href="#">베스트셀러</a></li>
+                    <li><a href="#">신간도서</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">북캐스트</a></li>
+                    <li><a href="#">유튜브</a></li>
+                    <li><a href="#">기프트</a></li>
+                </ul>
+            </div>
+            <nav>
+                <div class="nav-wrap">
+                    <div class="btn-close pc-nav">
+                        <button><img src="./images/nav_close.png" alt="menu close"></button>
+                    </div>
+                    <div class="login"><a href="#"><span>로그인</span> 해주세요.</a></div>
+                    <div class="logo"><a href="#"><img src="./images/kyobo_logo.png" alt=""></a></div>
+                    <ul class="sub-util">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </div>
+                <ul class="sns pc-nav">
+                    <li><a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fprivacy%2Fconsent%2Fpipa%2F%3Fparams%255Bpft_surface%255D%3Dfacebook_comet%26params%255Bis_new_user_blocking_flow%255D%3Dfalse%26params%255Bpft_session_key%255D%3D23e9c075-3115-48f4-8f63-809711e2ce7d%26params%255Bis_existing_user_blocking_flow%255D%26source%3Dpipa_blocking_flow"><img src="./images/facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com/kyobobook_online/"><img src="./images/isntagram.png" alt="instagram"></a></li>
+                    <li><a href="https://www.youtube.com/user/kbooknews"><img src="./images/youtube.png" alt="youtube"></a></li>
+                </ul>
+                <div class="gnb">
+                    <div class="gnb-depth-1">
+                        <ul>
+                            <li><a href="#">국내도서</a></li>
+                            <li><a href="#">외국도서</a></li>
+                            <li><a href="#">eBook</a></li>
+                            <li><a href="#">sam</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb-depth-2">
+                        <ul>
+                            <li>
+                                <div><a href="#">소설</a></div>
+                                <div><a href="#">시/에세이</a></div>
+                                <div><a href="#">경제/경영</a></div>
+                                <div><a href="#">자기계발</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">인문</a></div>
+                                <div><a href="#">역사/문화</a></div>
+                                <div><a href="#">종교</a></div>
+                                <div><a href="#">정치/사회</a></div>
+                                <div><a href="#">예술/대중문화</a></div>
+                                <div><a href="#">과학</a></div>
+                                <div><a href="#">기술/공학</a></div>
+                                <div><a href="#">컴퓨터/IT</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">유아(0~7세)</a></div>
+                                <div><a href="#">어린이(초등)</a></div>
+                                <div><a href="#">어린이전집</a></div>
+                                <div><a href="#">어린이ELT</a></div>
+                                <div><a href="#">청소년 </a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">초등참고서</a></div>
+                                <div><a href="#">중/고등참고서</a></div>
+                                <div><a href="#">대학교재</a></div>
+                                <div><a href="#">방송통신대교재</a></div>
+                                <div><a href="#">취업/수험서</a></div>
+                                <div><a href="#">외국어</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">가정/육아</a></div>
+                                <div><a href="#">건강</a></div>
+                                <div><a href="#">여행</a></div>
+                                <div><a href="#">요리</a></div>
+                                <div><a href="#">취미/실용/스포츠</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">잡지</a></div>
+                                <div><a href="#">만화</a></div>
+                            </li>
+                            <li>
+                                <div><a href="#">한국소개도서</a></div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li class="sub-category" data-subcategory-index="0"><a href="#">서양도서</a></li>
+                            <li class="sub-category" data-subcategory-index="1"><a href="#">어린이ELT</a></li>
+                            <li class="sub-category" data-subcategory-index="2"><a href="#">일본도서</a></li>
+                            <li class="sub-category" data-subcategory-index="3"><a href="#">기타 언어권</a></li>
+                        </ul>
+                        <ul>
+                            <li class="sub-category" data-subcategory-index="4"><a href="#">eBook</a></li>
+                            <li class="sub-category" data-subcategory-index="5"><a href="#">오디오북</a></li>
+                        </ul>
+                        <ul>
+                            <!--sam-->
+                            <li><a href="#">소설</a></li>
+                            <li><a href="#">자기계발</a></li>
+                            <li><a href="#">인문</a></li>
+                            <li><a href="#">경제/경영</a></li>
+                            <li><a href="#">시/에세이</a></li>
+                            <li><a href="#">여행/취미</a></li>
+                            <li><a href="#">역사/풍속/신화</a></li>
+                            <li><a href="#">사회/정치/법</a></li>
+                            <li><a href="#">자연과학/공학</a></li>
+                            <li><a href="#">가족/생활/요리</a></li>
+                            <li><a href="#">국어/외국어</a></li>
+                        </ul>
+                    </div>
+                    <div class="gnb-depth-3">
+                        <ul class="inter-sub western">
+                            <li><a href="#">문학</a></li>
+                            <li><a href="#">인문/사회</a></li>
+                            <li><a href="#">유아/아동/청소년</a></li>
+                            <li><a href="#">경제/경영</a></li>
+                            <li><a href="#">과학/기술</a></li>
+                            <li><a href="#">취미/실용/여행</a></li>
+                            <li><a href="#">ELT/수험서</a></li>
+                            <li><a href="#">교재</a></li>
+                            <li><a href="#">생활/요리/건강</a></li>
+                            <li><a href="#">예술/건축</a></li>
+                        </ul>
+                        <ul class="inter-sub child">
+                            <li><a href="#">노부영</a></li>
+                            <li><a href="#">알파벳/파닉스</a></li>
+                            <li><a href="#">코스북</a></li>
+                            <li><a href="#">학습교재</a></li>
+                            <li><a href="#">기타학습교재</a></li>
+                            <li><a href="#">미국교과서</a></li>
+                            <li><a href="#">사전/백과사전</a></li>
+                        </ul>
+                        <ul class="inter-sub japanese">
+                            <li><a href="#">잡지</a></li>
+                            <li><a href="#">실용서/예술</a></li>
+                            <li><a href="#">만화/애니</a></li>
+                            <li><a href="#">문학</a></li>
+                            <li><a href="#">문고</a></li>
+                            <li><a href="#">라이트노벨</a></li>
+                            <li><a href="#">어학/학습</a></li>
+                            <li><a href="#">엔터테인먼트</a></li>
+                            <li><a href="#">아동</a></li>
+                            <li><a href="#">인문/사회</a></li>
+                            <li><a href="#">자연/기술과학</a></li>
+                            <li><a href="#">신서</a></li>
+                        </ul>
+                        <ul class="inter-sub etc">
+                            <li><a href="#">프랑스도서</a></li>
+                            <li><a href="#">독일도서</a></li>
+                            <li><a href="#">스페인도서</a></li>
+                            <li><a href="#">중국도서</a></li>
+                        </ul>
+                        <ul class="eBook-sub eBook1">
+                            <li><a href="#">소설</a></li>
+                            <li><a href="#">경제/경영</a></li>
+                            <li><a href="#">자기계발</a></li>
+                            <li><a href="#">시/에세이</a></li>
+                            <li><a href="#">인문</a></li>
+                            <li><a href="#">국어/외국어</a></li>
+                            <li><a href="#">역사/풍속/신화</a></li>
+                            <li><a href="#">사회/정치/법</a></li>
+                            <li><a href="#">가정/생활/요리</a></li>
+                            <li><a href="#">여행/취미</a></li>
+                            <li><a href="#">건강/의학</a></li>
+                            <li><a href="#">종교/역학</a></li>
+                        </ul>
+                        <ul class="eBook-sub eBook2">
+                            <li><a href="#">소설</a></li>
+                            <li><a href="#">시/에세이</a></li>
+                            <li><a href="#">경제/경영</a></li>
+                            <li><a href="#">자기계발</a></li>
+                            <li><a href="#">인문/사회/역사</a></li>
+                            <li><a href="#">아동/청소년</a></li>
+                            <li><a href="#">어학</a></li>
+                            <li><a href="#">가정/생활/요리</a></li>
+                            <li><a href="#">건강/취미</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="swiper mySwiper first">
+            <div class="main-visual swiper-wrapper">
+                <div class="swiper-slide banner1">
+                    <div class="text">
+                        <div class="top-text">
+                            e세상의 모든 전자책
+                        </div>
+                        <div class="main-text">
+                            교보eBook
+                        </div>
+                        <div class="bottom-text">
+                            교보eook은
+                            다양한 디바이스에서 독서가 가능하며,
+                            디바이스간 독서 정보의 동기화가 가능합니다.
+                            한번 구매로 최대 5개의 디바이스에서 독서를 경험하세요
+                        </div>
+                        <div class="more"><a href="#">e-Book 바로보기 ></a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide banner2">
+                    <div class="text">
+                        <div class="top-text">
+                            "매월 소장하고 싶은 책, 여기다 모였다"
+                        </div>
+                        <div class="main-text">
+                            sam
+                        </div>
+                        <div class="more"><a href="#">sam 구독하기 ></a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide banner3">
+                    <div class="text">
+                        <div class="top-text">
+                            모바일로 주문하고 매장에서 바로 픽업
+                        </div>
+                        <div class="main-text">
+                            바로찾는<br>
+                            바로드림
+                        </div>
+                        <div class="more"><a href="#">바로드림 이용하기 ></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="qui-menu swiper mySwiper second">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo1.jpg" alt="picks">
+                            <img class="hover" src="./images/onlykyobo1_c.jpg" alt="picks">
+                        </div>
+                        <div class="text">픽스</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo2.jpg" alt="kcollection">
+                            <img class="hover" src="./images/onlykyobo2_c.jpg" alt="kcollection">
+                        </div>
+                        <div class="text">:K 컬렉션</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo3.jpg" alt="bookofmonth">
+                            <img class="hover" src="./images/onlykyobo3_c.jpg" alt="bookofmonth">
+                        </div>
+                        <div class="text">이달의 책</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo4.jpg" alt="font">
+                            <img class="hover" src="./images/onlykyobo4_c.jpg" alt="font">
+                        </div>
+                        <div class="text">손글씨 폰트</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo5.jpg" alt="kclover">
+                            <img class="hover" src="./images/onlykyobo5_c.jpg" alt="kclover">
+                        </div>
+                        <div class="text">Kclover 평점 좋은 책</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo6.jpg" alt="sentencecollect">
+                            <img class="hover" src="./images/onlykyobo6_c.jpg" alt="sentencecollect">
+                        </div>
+                        <div class="text">문장수집</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo7.jpg" alt="wallpaper">
+                            <img class="hover" src="./images/onlykyobo7_c.jpg" alt="wallpaper">
+                        </div>
+                        <div class="text">월페이퍼</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo8.jpg" alt="nangmanstore">
+                            <img class="hover" src="./images/onlykyobo8_c.jpg" alt="nangmanstore">
+                        </div>
+                        <div class="text">낭만서점</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo9.jpg" alt="story">
+                            <img class="hover" src="./images/onlykyobo9_c.jpg" alt="story">
+                        </div>
+                        <div class="text">스토리</div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#">
+                        <div class="image">
+                            <img class="normal" src="./images/onlykyobo10.jpg" alt="readingtree">
+                            <img class="hover" src="./images/onlykyobo10_c.jpg" alt="readingtree">
+                        </div>
+                        <div class="text">리딩트리</div>
+                    </a>
+                </li>
+            </ul>
+            <button class="prev"><img src="./images/prev_btn.png" alt="previous"></button>
+            <button class="next"><img src="./images/next_btn.png" alt="next"></button>
+        </div>
+        <div class="best-new-booknews">
+            <div class="wrap">
+                <div class="best-new">
+                    <div class="tit-tab">
+                        <div class="btn-best">
+                            <button class="on">베스트셀러</button>
+                        </div>
+                        <div class="btn-new">
+                            <button>신간도서</button>
+                        </div>
+                    </div>
+                    <div class="content-tab">
+                        <div class="best">
+                            <div class="top">
+                                <h3><a href="#">베스트셀러</a></h3>
+                                <div class="more"><a href="#">더 보기 ></a></div>
+                            </div>
+                            <div class="content">
+                                <div class="box">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="./images/bestseller1.jpg" alt="bestseller1">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">불편한 편의점</div>
+                                        <div class="writer">김호연 저자</div>
+                                        <ul class="tag">
+                                            <li><a href="#">#위로</a></li>
+                                            <li><a href="#">#삶</a></li>
+                                            <li><a href="#">#한국소설</a></li>
+                                            <li><a href="#">#독고</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="number">01</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="./images/bestseller2.jpg" alt="bestseller2">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">이어령의 마지막 수업</div>
+                                        <div class="writer">김지수 저자</div>
+                                        <ul class="tag">
+                                            <li><a href="#">#죽음</a></li>
+                                            <li><a href="#">#인문교양</a></li>
+                                            <li><a href="#">#인생</a></li>
+                                            <li><a href="#">#스승</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="number">02</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="./images/bestseller3.jpg" alt="bestseller3">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">물고기는 존재하지 않는다</div>
+                                        <div class="writer">룰루 밀러 저자</div>
+                                        <ul class="tag">
+                                            <li><a href="#">#과학이야기</a></li>
+                                            <li><a href="#">#스탄</a></li>
+                                            <li><a href="#">#데이비드</a></li>
+                                            <li><a href="#">#모험담</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="number">03</div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="./images/bestseller4.jpg" alt="bestseller4">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">어서오세요, 휴남동 서점입니다</div>
+                                        <div class="writer">황보름 저자</div>
+                                        <ul class="tag">
+                                            <li><a href="#">#우정</a></li>
+                                            <li><a href="#">#감동</a></li>
+                                            <li><a href="#">#동네 서점</a></li>
+                                            <li><a href="#">#종이 책</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="number">04</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new">
+                            <div class="top">
+                                <h3><a href="#">신간도서</a></h3>
+                                <div class="more"><a href="#">더 보기 ></a></div>
+                            </div>
+                            <div class="content">
+                                <div class="box">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="./images/new1.jpg" alt="new1">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">병을 무서워하지 않습니다</div>
+                                        <div class="writer">이승훈 저자</div>
+                                        <ul class="tag">
+                                            <li><a href="#">#뇌졸중</a></li>
+                                            <li><a href="#">#블럭</a></li>
+                                            <li><a href="#">#장기</a></li>
+                                            <li><a href="#">#서울대</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="./images/new2.jpg" alt="new2">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">내 생의 중력에 맞서</div>
+                                        <div class="writer">정인경 저자</div>
+                                        <ul class="tag">
+                                            <li><a href="#">#뇌 과학</a></li>
+                                            <li><a href="#">#이별</a></li>
+                                            <li><a href="#">#행복</a></li>
+                                            <li><a href="#">#칼 세이건</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="./images/new3.jpg" alt="new3">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">그럴수록 우리에겐 친구가 필요하다</div>
+                                        <div class="writer">이름트라우트 타르 저자</div>
+                                        <ul class="tag">
+                                            <li><a href="#">#내면</a></li>
+                                            <li><a href="#">#우정</a></li>
+                                            <li><a href="#">#유럽</a></li>
+                                            <li><a href="#">#관계</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="./images/new4.jpg" alt="new4">
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">뒤바뀐 영혼: 류팅의 기묘한 이야기</div>
+                                        <div class="writer">류팅 저자</div>
+                                        <ul class="tag">
+                                            <li><a href="#">#소설집</a></li>
+                                            <li><a href="#">#작가</a></li>
+                                            <li><a href="#">#제복</a></li>
+                                            <li><a href="#">#감옥</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booknews">
+                    <h3><a href="#">북뉴스 인터뷰</a></h3>
+                    <div class="box">
+                        <div class="image">
+                            <a href="#">
+                                <img src="./images/booknews1.jpg" alt="booknews1">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <div class="title">『뭐든지 가뿐하게 드는 여자』 정연진</div>
+                            <div class="preview">"나를 응원해주는 반려운동을 만나세요"</div>
+                            <ul class="tag">
+                                <li><a href="#">#역도</a></li>
+                                <li><a href="#">#최애</a></li>
+                                <li><a href="#">#반려</a></li>
+                                <li><a href="#">#허벅지</a></li>
+                            </ul>
+                            <div class="more"><a href="#">인터뷰 보기 ></a></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <a href="#">
+                                <img src="./images/booknews2.jpg" alt="booknews2">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <div class="title">『오늘은 예쁜 걸 먹어야겠어요』 박서련</div>
+                            <div class="preview">"일기를 쓸 때만큼은 누구에게도 동의를 구하지 않으니까요"</div>
+                            <ul class="tag">
+                                <li><a href="#">#감동</a></li>
+                                <li><a href="#">#공감</a></li>
+                                <li><a href="#">#일기</a></li>
+                                <li><a href="#">#일상</a></li>
+                            </ul>
+                            <div class="more"><a href="#">인터뷰 보기 ></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ad-scent">
+            <div class="wrap">
+                <div class="image">
+                    <img src="./images/scent.png" alt="the scent of page">
+                </div>
+                <div class="flex-wrap">
+                    <div class="text">
+                        <div class="title">The Scent of Page</div>
+                        <div class="sub">교보문고 시그니처 향</div>
+                        <div class="main">
+                            <p>
+                                '사람은 책을 만들고 책은 사람을 만든다'<br>
+                                '향기는 책을 깨우고 책은 향기를 품는다'
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="button">
+                        <a href="#">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="event-bookcast">
+            <div class="wrap">
+                <div class="event">
+                    <h3 class="tit"><a href="#">이벤트</a></h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="image">
+                                <a href="#">
+                                    <img class="writer" src="./images/writer.png" alt="writer">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <a href="#">
+                                    <div class="title">전승환 작가 랜선 팬사인회</div>
+                                    <div class="sub">'나에게 고맙다' 저자 전승환 작가의 랜선 팬사인회</div>
+                                </a>
+                            </div>
+                            <div class="more">
+                                <a href="#">더 많은 이벤트 보기 ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bookcast">
+                    <h3 class="tit"><a href="#">북캐스트</a></h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="image">
+                                <a href="#">
+                                    <img src="./images/bookcast1.jpg" alt="bookcast1">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <div class="title">
+                                    <a href="#">번아웃이 왔다면 읽어야 할 명언 모음</a>
+                                </div>
+                                <div class="sub">
+                                    <a href="#">호다 코트비의 365가지 인생 문장</a>
+                                </div>
+                                <ul class="tag">
+                                    <li><a href="#">#자기계발서</a></li>
+                                    <li><a href="#">#나의하루를지켜주는</a></li>
+                                    <li><a href="#">#글귀</a></li>
+                                    <li><a href="#">#명언</a></li>
+                                    <li><a href="#">#인생문장</a></li>
+                                </ul>
+                                <div class="more"><a href="#">바로보기 ></a></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="image">
+                                <a href="#">
+                                    <img src="./images/bookcast2.jpg" alt="bookcast2">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <div class="title">
+                                    <a href="#">NFT? 메타버스? 알아두면 돈 되는 요즘 경제 용어</a>
+                                </div>
+                                <div class="sub">
+                                    <a href="#">NFT의 미래 가치에 대해 가장 제대로 배울 수 있는 책</a>
+                                </div>
+                                <ul class="tag">
+                                    <li><a href="#">#NTF</a></li>
+                                    <li><a href="#">#NTF미래수업</a></li>
+                                    <li><a href="#">#메타버스</a></li>
+                                    <li><a href="#">#블록체인</a></li>
+                                    <li><a href="#">#경제</a></li>
+                                </ul>
+                                <div class="more"><a href="#">바로보기 ></a></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="image">
+                                <a href="#">
+                                    <img src="./images/bookcast3.jpg" alt="bookcast3">
+                                </a>
+                            </div>
+                            <div class="text">
+                                <div class="title">
+                                    <a href="#">습관적으로 '이 생각'하면 노화 속도 10년 막는다</a>
+                                </div>
+                                <div class="sub">
+                                    <a href="#">하버드 심리학 거장이 전하는 건강하고 지혜롭게 사는 법</a>
+                                </div>
+                                <ul class="tag">
+                                    <li><a href="#">#심리</a></li>
+                                    <li><a href="#">#인문</a></li>
+                                    <li><a href="#">#노화</a></li>
+                                    <li><a href="#">#건강</a></li>
+                                    <li><a href="#">#100세</a></li>
+                                </ul>
+                                <div class="more"><a href="#">바로보기 ></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ad-limit">
+            <div class="wrap">
+                <div class="image">
+                    <img src="./images/theessential.png" alt="the essential">
+                </div>
+                <div class="flex-wrap">
+                    <div class="text">
+                        <div class="title">#헤르만 헤세 #김수영</div>
+                        <div class="sub">디 에센셜X교보문고 단독 한정 특별판</div>
+                        <div class="main">
+                            <p>
+                                세계적인 작가의 대표 소설X에세이를<br>
+                                단 한권에 만나다
+                            </p>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="#">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="youtube">
+            <div class="wrap">
+                <h3><a href="#">유튜브</a></h3>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="vid">
+                            <iframe width="100%" height="100%"
+                                src="https://www.youtube.com/embed/wiXy6GV7t6U?list=PLXgmKHDGBY8fhdv9G1XC_Q7mHGAXOsZIO"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="title">[랜선 만남] 실시간으로만나보는 유명 저자와의 만남, 팬사인회</div>
+                        <div class="sub">비대면 시대에도 연결과 이야기는 계속됩니다.</div>
+                        <ul class="tag">
+                            <li><a href="#">#전승환</a></li>
+                            <li><a href="#">#랜선팬싸</a></li>
+                            <li><a href="#">#북토크</a></li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <div class="vid">
+                            <iframe width="100%" height="100%"
+                                src="https://www.youtube.com/embed/YZvlXDbMsz4?list=PLXgmKHDGBY8dO9voAZMUz9aXwOE0IAXjM"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="title">[써드림 첨삭소] 더 나은 글쓰기를 약속합니다</div>
+                        <div class="sub">SNS 감성글부터 막막한 자기소개서까지 이슬아 작가님이 직접 첨삭해드립니다.</div>
+                        <ul class="tag">
+                            <li><a href="#">#이슬아</a></li>
+                            <li><a href="#">#써드림첨삭소</a></li>
+                            <li><a href="#">#글쓰기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ad-sam">
+            <div class="wrap">
+                <div class="image">
+                    <img src="./images/sam7.8.png" alt="sam7.8">
+                </div>
+                <div class="flex-wrap">
+                    <div class="text">
+                        <div class="title">eBook 단말기 sam7.8 Plus</div>
+                        <div class="sub">특별기획</div>
+                        <div class="main">
+                            <p>
+                                나를 위한 선물<br>
+                                눈이 편한 독서 파트너
+                            </p>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="#">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gift">
+            <div class="wrap">
+                <h3><a href="#">기프트</a></h3>
+                <div class="boxes third">
+                    <div class="boxes-wrap swiper">
+                        <div class="swiper-wrapper">
+                            <div class="box swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="./images/gift1.jpg" alt="gift1">
+                                    </div>
+                                    <div class="brand">밍파</div>
+                                    <div class="name">카드클립형 휴대용 LED 돋보기</div>
+                                    <div class="price">9,900</div>
+                                </a>
+                            </div>
+                            <div class="box swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="./images/gift2.jpg" alt="gift2">
+                                    </div>
+                                    <div class="brand">카멜</div>
+                                    <div class="name">전자노트 카멜보드 12인치</div>
+                                    <div class="price">19,800</div>
+                                </a>
+                            </div>
+                            <div class="box swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="./images/gift3.jpg" alt="gift3">
+                                    </div>
+                                    <div class="brand">이룸 프라임 독서대</div>
+                                    <div class="name">프라임 높이조절 엘리베이터 독서대</div>
+                                    <div class="price">38,600</div>
+                                </a>
+                            </div>
+                            <div class="box swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="./images/gift4.jpg" alt="gift4">
+                                    </div>
+                                    <div class="brand">키스해링</div>
+                                    <div class="name">16K 라벨포인트 장우산</div>
+                                    <div class="price">10,900</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxes-wrap swiper">
+                        <div class="swiper-wrapper">
+                            <div class="box swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="./images/gift5.jpg" alt="gift5">
+                                    </div>
+                                    <div class="brand">이룸 프라임 독서대</div>
+                                    <div class="name">프라임 신제품 2단 독서대</div>
+                                    <div class="price">34,200</div>
+                                </a>
+                            </div>
+                            <div class="box swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="./images/gift6.jpg" alt="gift6">
+                                    </div>
+                                    <div class="brand">소이믹스</div>
+                                    <div class="name">알루미늄 접이식 높이조절 노트북 거치대</div>
+                                    <div class="price">28,900</div>
+                                </a>
+                            </div>
+                            <div class="box swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="./images/gift7.png" alt="gift7">
+                                    </div>
+                                    <div class="brand">다니즈</div>
+                                    <div class="name">아날로그 G 타이머</div>
+                                    <div class="price">9,900</div>
+                                </a>
+                            </div>
+                            <div class="box swiper-slide">
+                                <a href="#">
+                                    <div class="image">
+                                        <img src="./images/gift8.jpg" alt="gift8">
+                                    </div>
+                                    <div class="brand">테루츠</div>
+                                    <div class="name">세라믹 파워 샤프너 (고급칼갈이)</div>
+                                    <div class="price">7,100</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="wrap">
+                <div class="left">
+                    <ul class="notice">NOTICE
+                        <li><a href="#">교보문고 개인정보 처리방침 변경 안내 (3/18)</a></li>
+                        <li><a href="#">CJ대한통운 태업에 따른 배송지연 안내</a></li>
+                        <li><a href="#">교보문고 안드로이드 앱 스크롤 이용 오류 해결 방안 안내 (Android System Webview 오류)</a></li>
+                        <li><a href="#">교보문고 개인정보 처리방침 변경 안내 (3/4)</a></li>
+                    </ul>
+                    <ul class="proto">
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">청소년보호정책</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <div class="address">
+                        <p>
+                            ㈜ 교보문고 서울시 종로구 종로 1 대표이사 : 안병현<br>
+                            사업자등록번호 : 102-81-11670<br>
+                            대표전화 : 1544-1900 (발신자 부담전화) 팩스 : 0502-987-5711 (지역번호공통)<br>
+                            서울특별시 통신판매업신고번호 : 제 653호 ▶사업자정보확인
+                        </p>
+                    </div>
+                    <div class="copyright">
+                        <p>COPYRIGHT(C) KYOBO BOOK CENTRE ALL RIGHTS RESERVED.</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul class="about">
+                        <li><a href="#">ABOUT US</a>
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">인재채용</a></li>
+                                <li><a href="#">제휴/제안</a></li>
+                                <li><a href="#">광고문의</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">회원혜택</a>
+                            <ul>
+                                <li><a href="#">Prestige Lounge</a></li>
+                                <li><a href="#">신규회원 혜택</a></li>
+                                <li><a href="#">등급별 혜택</a></li>
+                                <li><a href="#">출석체크</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">빠른 서비스</a>
+                            <ul>
+                                <li><a href="#">북클럽카드 등록</a></li>
+                                <li><a href="#">영수증 후 적립</a></li>
+                                <li><a href="#">교보캐시 조회/충전</a></li>
+                                <li><a href="#">기프트카드 조회/충전</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">FAQ</a>
+                            <ul>
+                                <li><a href="#">주문/결제</a></li>
+                                <li><a href="#">eBook</a></li>
+                                <li><a href="#">도서/상품정보</a></li>
+                                <li><a href="#">중고장터</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="sns">
+                        <li><a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fprivacy%2Fconsent%2Fpipa%2F%3Fparams%255Bpft_surface%255D%3Dfacebook_comet%26params%255Bis_new_user_blocking_flow%255D%3Dfalse%26params%255Bpft_session_key%255D%3D23e9c075-3115-48f4-8f63-809711e2ce7d%26params%255Bis_existing_user_blocking_flow%255D%26source%3Dpipa_blocking_flow"><img src="./images/facebook.png" alt="facebook"></a></li>
+                        <li><a href="https://www.instagram.com/kyobobook_online/"><img src="./images/isntagram.png" alt="instagram"></a></li>
+                        <li><a href="https://www.youtube.com/user/kbooknews"><img src="./images/youtube.png" alt="youtube"></a></li>
+                    </ul>
+                    <div class="logo">
+                        <a href="#"><img src="./images/kyobo_logo_w.png" alt="kyobo"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--#wrapper-->
+</body>
+</html>
